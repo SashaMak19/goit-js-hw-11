@@ -116,7 +116,6 @@ let observer = new IntersectionObserver(onLoad, options);
 function onLoad(entries, observer) {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      pageScrolling(refDiv);
       page += 1;
       getData(refInput.value, page).then(data => {
         const {
